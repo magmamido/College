@@ -1,0 +1,8 @@
+YES
+2  6  1  6  2  7  8  8 
+YES
+15  14  6  5  12  13 
+YES
+4  |__IF Detected__||__Return False__|11 
+YES
+15  14  6  16  12  13 

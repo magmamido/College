@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  
+        <link rel="stylesheet" href="cartss.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-wideth", initial-scale=1.0>
+        <meta http-equiv="X-UA-Compatible" c0jtejt="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link herf="https://unpkg.com/ionicons@4.5.10-0/dist/css">
+     <!-- Bootstrap core CSS -->
+     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+     <!-- Additional CSS Files -->
+     <link rel="stylesheet" href="assets/css/fontawesome.css">
+     <link rel="stylesheet" href="assets/css/main.css">
+     <link rel="stylesheet" href="assets/css/owl.css">
+ 
+        <title>Shopping Cart</title>
+
+<style>body{background-image: url("images/cartbg.jpg"); background-repeat: no-repeat; background-size: cover;} 
+
+*{
+    font-size: x-large;
+   
+    text-align: center;
+}
+
+.basketTotalTitle{
+    background-color: white;
+  text-align: center;
+}
+
+.product-title { width: 100%;
+background-color: black;
+border-bottom: 1px solid white;
+border-top: 1px solid white;
+
+color: white;
+display: flex; align-items: center;
+ 
+}
+.price { width: 100%; 
+
+background-color: rgb(172, 18, 18);
+   border-bottom: 1px solid black;
+    display: flex; align-items: center;
+    
+    color:whitesmoke;
+}
+ .total { width: 100%; 
+  background-color: rgba(192, 13, 13, 0.322);
+   border-bottom: 1px solid white;
+    display: flex; align-items: center;
+    color:white;
+    text-align: center;
+
+ }
+ .product { width: 100%; 
+  background-color: rgba(231, 228, 19, 0.644);
+   display: flex;
+    justify-content: space-around; 
+    align-items: center; padding: 10px 0; 
+    border-bottom: 1px solid black;
+    color:white;
+ }
+ .quantity { width: 100%; 
+    background-color: brown;
+     border-bottom: 1px solid brown;
+      display: flex; align-items: center;
+      color:white;
+   }
+   .basketTotal{
+    text-align: center;
+font-size: xx-large;
+padding-left: 47%;
+    background-color: black;
+    border-bottom: 1px solid black;
+    color: white;
+   
+     display: flex; align-items: center;
+     font-weight: bold;
+   
+   }
+
+</style>
+
+
+    </head>
+
+    <body>
+        <header>
+            <div class="overlay"></div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                  <a class="navbar-brand" href="home.php"><h2>Egy <em>Droids</em></h2></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                      
+                        <li class="nav-item  ">
+                        <a class="nav-link" id="x" href="loggedin.php">Home</a>
+                      </li>
+                      <li class="nav-item active ">
+                        <a class="nav-link" href="productsloggedin.php">Our Products</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="aboutloggedin.php">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contactloggedin.php">Contact Us</a>
+                      </li>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="home.php">Log Out</a>
+                      </li>
+                         
+                      <li class="cart" style="margin-top: 11px;">
+                        <a href="cart.html">
+        
+                            <ion-icon name="basket" style="color:orangered"></ion-icon><span style="color:orangered"> 0
+                        </a>
+        
+        
+                      </li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>
+       
+        <div class="products-container">
+           
+
+
+            <div class="basketTotal">
+
+            </div>
+            <div class="products">
+
+            </div>
+        </div>
+        <script src='https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js' > </script>
+<script src="cart.js"></script>
+
+<p id="empty" style="color:orangered; font-size:x-large"> </p>
+<a href="checkout.php" class=". pull-left" style="
+margin-left: 20%;
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+"
+>Check Out</a>
+        
+<a onclick="myFunction()" href="#" class=". pull-right" style="
+margin-right: 30%;
+
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.myButton2:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}">Clear Cart</a>
+<script>
+    function myFunction() {
+     localStorage.clear();
+     window.location.replace("emptycart.html");
+
+     
+    
+    }
+    </script>
+    </body>
+</html>
